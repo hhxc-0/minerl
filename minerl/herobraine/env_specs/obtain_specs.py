@@ -57,6 +57,7 @@ class ObtainDiamondShovelWrapper(gym.Wrapper):
     def reset(self):
         self.seen = [0] * len(self.rewarded_items)
         self.episode_over = False
+        self.num_steps = 0
         obs = super().reset()
         return obs
 
